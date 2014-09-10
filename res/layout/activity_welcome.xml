@@ -27,6 +27,7 @@
         android:layout_height="wrap_content"
         android:text="@string/btn_dail_text"
         android:id="@+id/bt_dail_num"
+        android:onClick="dailPhoneNum"
         />
 
 </RelativeLayout>

@@ -13,7 +13,7 @@ import android.widget.Button;
 import android.widget.EditText;
 
 
-public class Welcome extends ActionBarActivity implements OnClickListener {
+public class Welcome extends ActionBarActivity {
 	
 	
 	// 把文本框做成类属性，不用每次打电话都查找
@@ -33,7 +33,7 @@ public class Welcome extends ActionBarActivity implements OnClickListener {
 		this.etInputNum = (EditText) Welcome.this.findViewById(R.id.et_input_phone_number);
         
         // 注册点击事件
-        btnDailNum.setOnClickListener(this);
+        //btnDailNum.setOnClickListener(this);
            
     }
 
@@ -57,24 +57,13 @@ public class Welcome extends ActionBarActivity implements OnClickListener {
         return super.onOptionsItemSelected(item);
     }
 
-    
-    /**
-     * 实现监听事件
-     */
-    public void onClick(View v) {
-
-    	switch (v.getId()){
-    	case R.id.bt_dail_num:
-    		this.dailPhoneNum();
-    		break;
-    	}
-	}
+   
     
     
     /**
      * 拨打电话
      */
-    private void dailPhoneNum()
+    public void dailPhoneNum()
     {
 		Log.i("chuan", "ahahh");
 
