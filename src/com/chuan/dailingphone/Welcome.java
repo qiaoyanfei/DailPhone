@@ -56,14 +56,11 @@ public class Welcome extends ActionBarActivity {
         }
         return super.onOptionsItemSelected(item);
     }
-
-   
-    
     
     /**
      * ²¦´òµç»°
      */
-    public void dailPhoneNum()
+    public void dailPhoneNum(View view)
     {
 		Log.i("chuan", "ahahh");
 
