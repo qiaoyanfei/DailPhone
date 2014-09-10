@@ -14,6 +14,10 @@ import android.widget.EditText;
 
 
 public class Welcome extends ActionBarActivity {
+	
+	
+	// 把文本框做成类属性，不用每次打电话都查找
+	EditText etInputNum = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,12 +28,13 @@ public class Welcome extends ActionBarActivity {
         
         // 获取拨打电话号码的按钮引用
         Button btnDailNum = (Button) findViewById(R.id.bt_dail_num);
+       
+		// 获取文本输入框引用
+		this.etInputNum = (EditText) Welcome.this.findViewById(R.id.et_input_phone_number);
         
         // 注册点击事件
         btnDailNum.setOnClickListener(new DailNumClickListener());
-        
-        
-        
+           
     }
     
     
@@ -45,10 +50,7 @@ public class Welcome extends ActionBarActivity {
 		 */
 		public void onClick(View v) {
 			Log.i("chuan", "ahahh");
-			
-			// 获取文本输入框引用
-			EditText etInputNum = (EditText) Welcome.this.findViewById(R.id.et_input_phone_number);
-			
+
 			// 获取电话号码
 			String phoneNum = etInputNum.getText().toString();
 			
